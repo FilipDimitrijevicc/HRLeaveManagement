@@ -15,15 +15,13 @@ namespace HR.LeaveManagement.Application.Features.LeaveRequests.Handlers.Queries
     public class GetLeaveRequestDetailRequestHandler : IRequestHandler<GetLeaveRequestDetailRequest, LeaveRequestDto>
     {
         private readonly ILeaveRequestRepository _leaveRequestRepository;
-        private readonly ILeaveTypeRepository _leaveTypeRepository;
         private readonly IMapper _mapper;
 
-        public GetLeaveRequestDetailRequestHandler(ILeaveRequestRepository leaveRequestRepository,
-            ILeaveTypeRepository leaveTypeRepository, 
+        public GetLeaveRequestDetailRequestHandler(
+            ILeaveRequestRepository leaveRequestRepository,
             IMapper mapper)
         {
             _leaveRequestRepository = leaveRequestRepository;
-            _leaveTypeRepository = leaveTypeRepository;
             _mapper = mapper;
         }
 
