@@ -14,6 +14,8 @@ namespace HR.LeaveManagement.Application.DTOs.LeaveRequest.Validators
 
         public CreateLeaveRequestDtoValidator(ILeaveTypeRepository leaveTypeRepository)
         {
+            _leaveTypeRepository = leaveTypeRepository;
+
             RuleFor(x => x.StartDate)
                 .LessThan(x => x.EndDate).WithMessage("{PropertyName} must be before {ComparisonValue}");
 
