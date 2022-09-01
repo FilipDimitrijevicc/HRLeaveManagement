@@ -6,13 +6,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HR.LeaveManagement.Application.DTOs.LeaveRequest.Validators
-{
-        public class ILeaveRequestDtoValidator : AbstractValidator<ILeaveRequestDto>
+namespace HR.LeaveManagement.Application.DTOs.LeaveRequest.Validators 
+{ 
+        public class LeaveRequestDtoValidator : AbstractValidator<ILeaveRequestDto>
         {
             private readonly ILeaveTypeRepository _leaveTypeRepository;
 
-            public ILeaveRequestDtoValidator(ILeaveTypeRepository leaveTypeRepository)
+            public LeaveRequestDtoValidator(ILeaveTypeRepository leaveTypeRepository)
             {
                 _leaveTypeRepository = leaveTypeRepository;
 
